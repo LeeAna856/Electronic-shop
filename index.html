@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racqran Electronics</title>
+    <!-- Load Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Load Font Awesome for icons (social media) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ8gE/K1r7j0W1FkHhA/db8r5U2E+qE0oG/9gU9w5A5Y5pW2P95A8r/9A5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --bs-body-bg: #f8f9fa;
+            --dark-section-bg: #808080;
+            --dark-section-text: #ffffff;
+            --card-bg: #d3d3d3;
+            --primary-blue: #4a70a8;
+        }
+
+        .dark-section {
+            background-color: var(--dark-section-bg);
+            color: var(--dark-section-text);
+            padding: 4rem 0;
+        }
+
+        .navbar-dark {
+            background-color: var(--dark-section-bg) !important;
+        }
+        .navbar .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+        .hero-section {
+            background-image: url('/images/hero.png');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            color: var(--dark-section-text);
+            display: flex;
+            align-items: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            color: black;
+            border: none;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-card a.btn {
+            margin-top: auto;
+        }
+
+        .btn-custom-blue {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: var(--dark-section-text);
+            padding: 0.5rem 2rem;
+            border-radius: 50rem;
+            font-weight: bold;
+        }
+
+        .btn-custom-blue:hover {
+            background-color: #3b5a88;
+            border-color: #3b5a88;
+            color: var(--dark-section-text);
+        }
+
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+
+        .contact-form .form-control {
+            background-color: #d3d3d3;
+            border: 2px solid #000000;
+            color: #000000;
+            border-radius: 8px;
+        }
+
+        .contact-form .form-control::placeholder {
+            color: #444;
+        }
+
+        .navbar-brand {
+            color: black !important;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*  Footer: black line at top, no margin */
+        footer.dark-section {
+            border-top: 2px solid #000;
+            margin: 0;
+            padding: 1rem 0;
+            background-color: #808080;
+            color: white;
+        }
+
+        /*  Contact Us section background only */
+        #contact {
+            background-color: #d3d3d3 !important;
+            color: black !important;
+        }
+        
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">RACQRAN ELECTRONICS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
+                <li class="nav-item"><a class="nav-link" href="#shop">SHOP</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-section" id="home">
+    <div class="container">
+        <div class="col-lg-8 col-md-10">
+            <h1 class="display-4 fw-bolder">Bringing quality electronics to your doorstep</h1>
+            <p class="lead mb-4">We provide a wide range of electronic components and repair services.</p>
+            <a href="#shop" class="btn btn-custom-blue btn-lg">Shop now</a>
+        </div>
+    </div>
+</header>
+
+<section class="dark-section" id="shop">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Tools and Parts for Your Project</h2>
+        <div class="row g-4 mb-5">
+            <!-- Products -->
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="product-card p-3 text-center h-100">
+                    <img src="images/product1.png" class="img-fluid mb-2" alt="Product Image">
+                    <p class="fw-bold mb-2 text-truncate" title="Surface Mount Diode">Surface Mount Diode</p>
+                    <p class="small text-muted mb-3">₱35.00</p>
+                    <a href="#orderForm" class="btn btn-sm btn-custom-blue w-100 mt-auto">Order Now</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="product-card p-3 text-center h-100">
+                    <img src="images/product2.png" class="img-fluid mb-2" alt="Product Image">
+                    <p class="fw-bold mb-2 text-truncate" title="Electrolytic Capacitor">Electrolytic Capacitor</p>
+                    <p class="small text-muted mb-3">₱18.00</p>
+                    <a href="#orderForm" class="btn btn-sm btn-custom-blue w-100 mt-auto">Order Now</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="product-card p-3 text-center h-100">
+                    <img src="images/product3.png" class="img-fluid mb-2" alt="Product Image">
+                    <p class="fw-bold mb-2 text-truncate" title="Axial Mini-Resistor">Multi-tester</p>
+                    <p class="small text-muted mb-3">₱350.00</p>
+                    <a href="#orderFormorderForm" class="btn btn-sm btn-custom-blue w-100 mt-auto">Order Now</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="product-card p-3 text-center h-100">
+                    <img src="images/product4.png" class="img-fluid mb-2" alt="Product Image">
+                    <p class="fw-bold mb-2 text-truncate" title="10 PCS Assorted LED">10 PCS Assorted LED</p>
+                    <p class="small text-muted mb-3">₱40.00</p>
+                    <a href="#orderForm" class="btn btn-sm btn-custom-blue w-100 mt-auto">Order Now</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="product-card p-3 text-center h-100">
+                    <img src="images/product5.png" class="img-fluid mb-2" alt="Product Image">
+                    <p class="fw-bold mb-2 text-truncate" title="3M Ohm Resistor">3M Ohm Resistor</p>
+                    <p class="small text-muted mb-3">₱2.00</p>
+                    <a href="#orderForm" class="btn btn-sm btn-custom-blue w-100 mt-auto">Order Now</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="product-card p-3 text-center h-100">
+                    <img src="images/product6.png" class="img-fluid mb-2" alt="Product Image">
+                    <p class="fw-bold mb-2 text-truncate" title="Tantalum Capacitor">Tantalum Capacitor</p>
+                    <p class="small text-muted mb-3">₱67.50</p>
+                    <a href="#orderForm" class="btn btn-sm btn-custom-blue w-100 mt-auto">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center pt-3">
+            <a href="#shop" class="btn btn-custom-blue btn-lg">SHOP NOW</a>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="about">
+    <div class="container">
+        <h2 class="fw-bold mb-4">About Us</h2>
+        <div class="row align-items-center">
+            <div class="col-md-7 mb-4 mb-md-0">
+                <p>Racqran Electronics Parts and Repair specializes in selling a variety of electronic components and providing reliable repair services. With years of experience in the industry, our team is dedicaten to offering quality products and solutions to meet your electronic needs.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="images/e16df999-3133-4b4b-8c2c-e57c98117fdb.jpg" class="about-image shadow-lg" alt="Electronics Technician working">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<div id="contact" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <h5 class="text-uppercase fw-bold mb-3 text-dark">Contact Us</h5>
+                <p class="mb-1"><i class="fas fa-envelope me-2"></i> racoranelectro@gmail.com</p>
+                <p class="mb-1"><i class="fab fa-facebook me-2"></i> racoranelectro</p>
+                <p class="mb-1"><i class="fas fa-phone me-2"></i> 09167138057</p>
+            </div>
+
+            <div class="col-lg-7 contact-form" id="orderForm">
+                <h5 class="text-center fw-bold mb-3 text-dark">Get In Touch</h5>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <input type="text" class="form-control" placeholder="Name..." aria-label="Name">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control" placeholder="Phone Number..." aria-label="Name">
+                        </div>
+                        <div class="col-12">
+                            <input type="email" class="form-control" placeholder="Email..." aria-label="Email">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" placeholder="Order Details" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-custom-blue">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="dark-section" style="border-top: 2px solid #000; margin: 0; padding: 0;">
+  <div class="text-center small text-muted py-3 border-dark" 
+       style="white-space: nowrap; width: 100%; overflow: hidden; text-overflow: ellipsis; margin: 0 auto;">
+    &copy; 2025 Racoran Electronics. All rights reserved.
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+cdn.jsdelivr.net
+Rôçhêllê
+
